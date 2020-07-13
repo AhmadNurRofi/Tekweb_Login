@@ -28,7 +28,7 @@
               <img src="<?= base_url() ?>/template/stisla-master/assets/img/ahmadrofi.png" alt="logo" width="100" class="shadow-light rounded-circle">
             </div>
             </div>
-
+ 
             <div class="card card-primary">
               <div class="card-header"><h4>Login</h4></div>
 
@@ -70,7 +70,7 @@
                 ?>
                 
 
-<?php if(!empty(session()->getFlashdata('gagal'))){?>
+            <?php if(!empty(session()->getFlashdata('gagal'))){?>
 
               <div class="alert alert-danger"> 
               
@@ -78,7 +78,7 @@
               
               </div>
 
-<?php } ?>
+            <?php } ?>
 
 
               </div>

@@ -69,55 +69,62 @@
       <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <h1>Selamat Datang <?= session()->get('nama_user')?>, di halaman Tekweb</h1>
-        </div>
-          <div class="row">
+            <h1>Tambah Data</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item active"><a href="/user">home</a></div>
+              <div class="breadcrumb-item">Tambah Data</div>
+            </div>
+          </div>
+
+          <div class="section-body">
+            <div class="row">
               <div class="col-12">
                 <div class="card">
                   <div class="card-header">
-                    <h4>Table list user aplikasi ini</h4>
+                    <h4>Tambah Data User pada form di bawah ini</h4>
                     <div class="card-header-action">
 
-                    <a href="/tambahdata" class="btn btn-primary btn-lg btn-block btn-icon-split">  
-                        Tambah Data</a>
+                        <a href="/user" class="btn btn-danger btn-block">  
+                          <i></i>Batal
+                        </a>
 
                     </div>
                   </div>
+
+          <form action="/user/save" method="post">
                   <div class="card-body">
-                    <div class="table-responsive">
-                      <table class="table table-bordered table-md">
-                        <tr>
-                          <th scope="col">No ID</th>
-                          <th scope="col">Nama</th>
-                          <th scope="col">Email</th>
-                          <th scope="col">Aksi</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-      <?php foreach($user as $row): ?>
-                        <tr>
-                          <td><?= $row['id_user']; ?></td>
-                          <td><?= $row['nama_user']; ?></td>
-                          <td><?= $row['email']; ?></td>
-                          <td>
-                            <div class="buttons">
-                              <a class="btn btn-primary" href="/user/edit/ <?= $row['id_user']; ?>">edit</a>
-                              <button class="btn btn-danger" href="/user/delete/ <?= $row['id_user']; ?>" data-confirm="Hapus?|apakah anda inggin melanjutkan hapus data ini?" data-confirm-yes="alert('Data Gagal di hapus, Coba Lagi lain waktu :)');">
-                                Hapus
-                             </button>
-                            </div>
-                          </td>
-                        </tr>
-      <?php endforeach; ?>
-                      </tbody>
-                    </table>
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">NO ID</label>
+                      <div class="col-sm-12 col-md-7">
+                        <input type="text" name="id_user" class="form-control" placeholder="masukan nomor ID">
+                      </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama</label>
+                      <div class="col-sm-12 col-md-7">
+                        <input type="text" name="nama_user" class="form-control" placeholder="masukan nama">
+                      </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Email</label>
+                      <div class="col-sm-12 col-md-7">
+                        <input type="text" name="email" class="form-control" placeholder="masukan email">
+                      </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                        <button type="submit" class="btn btn-success">  Simpan  </button>
+                      </div>
+                    </div>
                   </div>
+
+            </form>
+            
                 </div>
               </div>
             </div>
-        </section>
-        
-
+          </div>
+        </div>
       </div>
 
       </div>

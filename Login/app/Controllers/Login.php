@@ -26,7 +26,7 @@ class Login extends BaseController
             session()->set('username',$cek['username']);
             session()->set('nama_user',$cek['nama_user']);
             session()->set('level',$cek['level']);
-            return redirect()->to(base_url('home'));
+            return redirect()->to(base_url('user'));
         }else{
             //jika username pass salah
             session()->setFlashdata('gagal', 'username atau password salah !');

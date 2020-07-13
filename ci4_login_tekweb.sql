@@ -24,16 +24,18 @@ CREATE TABLE `user` (
   `id_user` int(11) NOT NULL AUTO_INCREMENT,
   `nama_user` varchar(75) DEFAULT NULL,
   `username` varchar(75) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
   `password` varchar(75) DEFAULT NULL,
   `level` int(1) DEFAULT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=1700016021 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2147483648 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `user` */
 
-insert  into `user`(`id_user`,`nama_user`,`username`,`password`,`level`) values 
-(1700016019,'ROFEX','admin','admin',1),
-(1700016020,'ahmad rofi','user','user',2);
+insert  into `user`(`id_user`,`nama_user`,`username`,`email`,`password`,`level`) values 
+(1700016018,'ahmad rofi','user','ahmad@gmail.com','user',2),
+(1700016019,'ROFEX','admin','Rofex_@admin.com','admin',1),
+(1700016020,'anonimous','hack','_anomim_@hack.com','hack',3);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
